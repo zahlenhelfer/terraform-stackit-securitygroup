@@ -8,3 +8,8 @@ variable "rules" {
     "ssh-22-tcp"     = [22, 22, "tcp", "SSH"]
   }
 }
+
+variable "project_id" {
+  type        = string
+  description = "The ID of the project in which the resource belongs."
+}
