@@ -9,12 +9,12 @@ resource "stackit_security_group_rule" "ingress" {
   direction         = "ingress"
   ether_type        = "IPv4"
 
-  port_range {
+  port_range = {
     from = var.rules["http-80-tcp"][0]
     to   = var.rules["http-80-tcp"][1]
   }
 
-  protocol {
-    name = var.rules["http-80-tcp"][3]
+  protocol = {
+    name = var.rules["http-80-tcp"][2]
   }
 }
