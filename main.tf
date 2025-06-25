@@ -2,7 +2,7 @@ resource "stackit_security_group" "example" {
   project_id = var.project_id
   name       = "http-80-tcp"
   labels = {
-    "description" = var.rules["http-80-tcp"].value[4]
+    "description" = var.rules["http-80-tcp"][4]
   }
 }
 
