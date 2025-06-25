@@ -5,7 +5,7 @@ resource "stackit_security_group" "example" {
 
 resource "stackit_security_group_rule" "ingress" {
   project_id        = var.project_id
-  security_group_id = stackit_security_group.example.id
+  security_group_id = stackit_security_group.example.security_group_id
   direction         = "ingress"
   ether_type        = "IPv4"
 
