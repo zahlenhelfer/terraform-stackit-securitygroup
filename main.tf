@@ -3,7 +3,7 @@ resource "stackit_security_group" "example" {
   name       = var.rules[var.rule_name][3]
 }
 
-resource "stackit_security_group_rule" "ingress" {
+resource "stackit_security_group_rule" "ingress_ipv4" {
   project_id        = var.project_id
   security_group_id = stackit_security_group.example.security_group_id
   direction         = "ingress"
@@ -19,7 +19,7 @@ resource "stackit_security_group_rule" "ingress" {
   }
 }
 
-resource "stackit_security_group_rule" "ingress" {
+resource "stackit_security_group_rule" "ingress_ipv6" {
   project_id        = var.project_id
   security_group_id = stackit_security_group.example.security_group_id
   direction         = "ingress"
