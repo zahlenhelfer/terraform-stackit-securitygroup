@@ -13,8 +13,3 @@ variable "project_id" {
   type        = string
   description = "The ID of the project in which the resource belongs."
 }
-
-variable "rule_name" {
-  type        = string
-  description = "The name of the security group rule."
-}

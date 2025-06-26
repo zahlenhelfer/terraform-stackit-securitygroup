@@ -1,6 +1,6 @@
 resource "stackit_security_group" "example" {
   project_id = var.project_id
-  name       = var.rules["http-80-tcp"][3]
+  name       = var.rules[var.rule_name][3]
 }
 
 resource "stackit_security_group_rule" "ingress" {
@@ -10,11 +10,11 @@ resource "stackit_security_group_rule" "ingress" {
   ether_type        = "IPv4"
 
   port_range = {
-    min = var.rules["http-80-tcp"][0]
-    max = var.rules["http-80-tcp"][1]
+    min = var.rules[var.rule_name][0]
+    max = var.rules[var.rule_name][1]
   }
 
   protocol = {
-    name = var.rules["http-80-tcp"][2]
+    name = var.rules[var.rule_name][2]
   }
 }
